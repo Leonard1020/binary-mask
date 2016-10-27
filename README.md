@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/Leonard1020/binary-mask.svg)](https://travis-ci.org/Leonard1020/binary-mask)
-
 # binary-mask
 Creates a binary mask based on the differences of two arrays
+
+[![Build Status](https://travis-ci.org/Leonard1020/binary-mask.svg)](https://travis-ci.org/Leonard1020/binary-mask)
 
 ### Installation
 <pre><code>npm install binary-mask</code></pre>
