@@ -1,0 +1,21 @@
+os:
+  - linux
+
+language: node_js
+node_js:
+  - '6'
+  - '5'
+  - '4'
+
+notifications:
+  email:
+    recipients:
+      - josh.leonard1020@gmail.com
+    on_success: change
+    on_failure: change
+
+before_script:
+  - npm install -g mocha
+
+script:
+  - npm test
