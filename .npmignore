@@ -1,2 +1,8 @@
-#tests
+# ignore Travis
+*.yml
+
+# ignore test folder and dist folder
 test/*
+
+# ignoring node_modules folder just in case
+node_modules/*
