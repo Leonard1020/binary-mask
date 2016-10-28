@@ -1,6 +1,6 @@
 {
   "name": "binary-mask",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Creates a binary mask based on the differences of two arrays",
   "main": "binary-mask.js",
   "scripts": {
