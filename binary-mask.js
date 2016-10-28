@@ -1,4 +1,11 @@
 module.exports = (first, second) => {
+  if (!first) {
+    first = [];
+  }
+  if (!second) {
+    second = [];
+  }
+
   var max = Math.max(first.length, second.length);
 
   var final = [];

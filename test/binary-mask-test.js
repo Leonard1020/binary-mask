@@ -37,9 +37,42 @@ describe("Unknown types", function() {
 
 describe("Standard case", function() {
   it("should compare each element based on value and type", function() {
-    var mask = bitmask([1, 2, 3], [1, 2, "3"])
+    var mask = bitmask([1, 2, 3], [1, 2, "3"]);
 
     expect(mask.length).to.equal(3);
     expect(mask).to.eql([0, 0, 1]);
+  });
+});
+
+describe("Undefined first argument", function() {
+  it("should treat the first argument as an empty array", function() {
+    var mask = bitmask(undefined, [1, 2, "3"]);
+
+    expect(mask.length).to.equal(3);
+    expect(mask).to.eql([1, 1, 1]);
+  });
+});
+
+describe("Undefined second argument", function() {
+  it("should treat the second argument as an empty array", function() {
+    var mask = bitmask([1, 2, 3]);
+
+    expect(mask.length).to.equal(3);
+    expect(mask).to.eql([1, 1, 1]);
+  });
+});
+
+describe("String arguments", function() {
+  it("should treat the strings as arrays", function() {
+    var mask = bitmask("Hello", "hello");
+
+    expect(mask.length).to.equal(5);
+    expect(mask).to.eql([1, 0, 0, 0, 0]);
+  });
+  it("should treat the empty strings as empty arrays", function() {
+    var mask = bitmask("Hello", "")
+
+    expect(mask.length).to.equal(5);
+    expect(mask).to.eql([1, 1, 1, 1, 1]);
   });
 });
